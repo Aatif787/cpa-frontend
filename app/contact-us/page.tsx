@@ -555,7 +555,7 @@ export default function ContactUsPage() {
         title="Need Official Certificates for a Tender?"
         description="View our complete list of verified government certificates from CPWD, Goa PWD, Haryana PWD, and MCD Delhi."
         primaryAction={{ label: "View Registrations", href: "/registrations" }}
-        secondaryAction={{ label: "View Financial Standing", href: "/financials" }}
+        secondaryAction={{ label: "View Major Projects", href: "/major-projects" }}
       />
     </div>
   );

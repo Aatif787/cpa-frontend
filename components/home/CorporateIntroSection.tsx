@@ -123,10 +123,10 @@ export const AboutUsSection: React.FC = () => {
                 Five decades &bull; Class-I PWD Verified
               </span>
               <Link
-                href="/financials"
+                href="/registrations"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-[#F5B82E] hover:text-[#081224] text-[11px] font-mono uppercase tracking-wider text-[#F5B82E] transition-all border border-[#F5B82E]/30 shrink-0"
               >
-                <span>Audited Financials</span>
+                <span>Class-I Registrations</span>
                 <span>&rarr;</span>
               </Link>
             </div>

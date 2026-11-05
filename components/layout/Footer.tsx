@@ -83,14 +83,6 @@ export const Footer: React.FC = () => {
                     Registrations &amp; Licenses
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/financials"
-                    className="text-cpa-text-inverse-muted hover:text-cpa-gold transition-colors duration-150"
-                  >
-                    Financial Standing
-                  </Link>
-                </li>
               </ul>
             </div>
 

@@ -26,7 +26,6 @@ This document specifies the routing architecture for the CPA Arora website rebui
 | `/infrastructure` | `200 OK` | `app/infrastructure/page.tsx` | Plants, Fleet & Machinery | `Home / Infrastructure & Machinery` |
 | `/registrations` | `200 OK` | `app/registrations/page.tsx` | Departmental Enlistments & Class-1 | `Home / Registrations & Enlistments` |
 | `/contact-us` | `200 OK` | `app/contact-us/page.tsx` | Head Office, Phone & Inquiries | `Home / Contact Us` |
-| `/financials` | `200 OK` | `app/financials/page.tsx` | Solvency, Banking & Capacity | `Home / Financials` |
 | `/*` (Fallback) | `404 Not Found` | `app/not-found.tsx` | Branded 404 Error Page | N/A |
 
 ---

@@ -88,7 +88,6 @@ All legacy routes from the original website are preserved, alongside a newly int
 - `/infrastructure` — Plant Fleet, Sensor Pavers & Mix Units
 - `/registrations` — Statutory Class-I & Class IA Enlistments & Approvals
 - `/contact-us` — Corporate Headquarters & Official Telephones
-- `/financials` — Solvency & Bidding Capacity
 
 See [docs/route-inventory.md](docs/route-inventory.md) for full routing specifications.
 

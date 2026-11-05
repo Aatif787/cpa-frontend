@@ -61,7 +61,6 @@ const NAV_ITEMS: NavItem[] = [
   },
   { label: "Infrastructure", href: "/infrastructure" },
   { label: "Registrations", href: "/registrations" },
-  { label: "Financials", href: "/financials" },
 ];
 
 export const Header: React.FC = () => {
