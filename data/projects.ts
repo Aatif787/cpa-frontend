@@ -1002,3 +1002,465 @@ export const KEY_EXECUTED_PROJECTS: KeyExecutedProject[] = [
     client: "PWD Govt. of Delhi",
   },
 ];
+
+// =========================================================================
+// LIST OF MAJOR WORK DONE (44 MAJOR CONTRACTS - HISTORICAL RECORD)
+// =========================================================================
+
+export interface MajorWorkDoneItem {
+  sNo: number;
+  nameOfWork: string;
+  owner: string;
+  cost: string;
+  commencementDate: string;
+  stipulatedDate: string;
+  actualDate: string;
+}
+
+export const TOTAL_MAJOR_WORK_DONE_VALUE = "5,18,95,01,654";
+
+export const MAJOR_WORK_DONE_LIST: MajorWorkDoneItem[] = [
+  {
+    sNo: 1,
+    nameOfWork:
+      "Construction of Six/Four Laning of NH-5 (New NH-16) from Puintola to Tangi (Km. 284.000 to 355.000) in the state of Odisha on EPC Mode.",
+    owner: "National Highway Authority Of India",
+    cost: "1,00,67,00,000",
+    commencementDate: "17.12.2010",
+    stipulatedDate: "-",
+    actualDate: "-",
+  },
+  {
+    sNo: 2,
+    nameOfWork:
+      "Annual Contracts for Construction /Reconstruction / Resurfacing of Runway/Taxiways /Aprons and Pheripheral Roads Including Rigid/Flexible Road and Drainage Structure of Box Culverts , Pipe Culverts, RCC Drains in The Area of Delhi International Airport 2016-2019.",
+    owner: "Delhi International Airport Limited / GMR",
+    cost: "47,41,62,002",
+    commencementDate: "01.01.2016",
+    stipulatedDate: "02.02.2019",
+    actualDate: "30.04.2019",
+  },
+  {
+    sNo: 3,
+    nameOfWork:
+      "Road work of Hospitality District & Landside area at IGI Airport, New Delhi AND ii) Construction of Taxiway PAPA - 1 & Associated civil work at Airside IGI Airport, New Delhi iii) Providing & Laying DBM & BC, Dismantling, Disposal etc., at DSITNAK at IGI Airport, New Delhi.",
+    owner: "Vijay Nirman Company Pvt. Ltd.",
+    cost: "25,66,10,797",
+    commencementDate: "03.06.2017",
+    stipulatedDate: "12.06.2017",
+    actualDate: "31.03.2018",
+  },
+  {
+    sNo: 4,
+    nameOfWork:
+      "Conversion of Delhi Gurgaon -Section of National Highway 8 from 14.3 to Km 42 into an access control 8/6 Lane Expressway on BOT basis.",
+    owner: "Millennium City Expressways Private Limited",
+    cost: "12,65,43,266",
+    commencementDate: "10.07.2019",
+    stipulatedDate: "30.07.2019",
+    actualDate: "11.09.2019",
+  },
+  {
+    sNo: 5,
+    nameOfWork:
+      "Strengthening of the existing 2 lanes carriageway, constructing additional 4 lanes , service road, footpath, drainage , X drainage works, fixing kerb stone constructing culverts etc. at Dwarka project Phase-1 ,Group-I New Delhi.",
+    owner: "Unitech Ltd.",
+    cost: "27,13,63,394",
+    commencementDate: "13.12.2001",
+    stipulatedDate: "12.02.2002",
+    actualDate: "06.01.2004",
+  },
+  {
+    sNo: 6,
+    nameOfWork:
+      "C/O proposed Link road from NH-8 through Southern Boundary of Airport Authority. S.H: Construction of road, footpath, S.W. Drain( Harvesting system ) , Bridge Abutments and Approach of R.U.B",
+    owner: "DDA/Valecha Engineering Ltd",
+    cost: "18,73,11,062",
+    commencementDate: "15.12.2003",
+    stipulatedDate: "14.09.2004",
+    actualDate: "28.11.2006",
+  },
+  {
+    sNo: 7,
+    nameOfWork:
+      "Widening and Strengthening of road from Karbala Junction to Amer road Junction on Delhi Bypass road Jaipur (Package NO.JAI/ST/05)",
+    owner: "RUIDP / Valecha Engineering Ltd",
+    cost: "11,70,54,477",
+    commencementDate: "17.04.2003",
+    stipulatedDate: "02.04.2004",
+    actualDate: "29.09.2008",
+  },
+  {
+    sNo: 8,
+    nameOfWork:
+      '"Widening and Upgradation of Road - Rohtak-Kharkhoda Delhi Border (SH- 18) Km.10200 to 40.760"',
+    owner: "HSRDC / M/s Unity infra Projects Ltd.",
+    cost: "17,49,69,585",
+    commencementDate: "30.07.2008",
+    stipulatedDate: "30.06.2009",
+    actualDate: "31.10.2010",
+  },
+  {
+    sNo: 9,
+    nameOfWork:
+      "Development of Parking lot for DTC for Commonwealth Games near IP Station at Ring Road, New Delhi",
+    owner: "Public Works Department/M-141",
+    cost: "9,12,38,321",
+    commencementDate: "24.09.2009",
+    stipulatedDate: "24.04.2010",
+    actualDate: "4.11.2010",
+  },
+  {
+    sNo: 10,
+    nameOfWork:
+      "Improvement and Upgradation of Mehroli Badarpur Road",
+    owner: "Public Works Department, CNMO M-112 Ishwar Nagar New Delhi",
+    cost: "8,90,52,217",
+    commencementDate: "27.12.2009",
+    stipulatedDate: "26.06.2010",
+    actualDate: "11.10.2010",
+  },
+  {
+    sNo: 11,
+    nameOfWork:
+      "Street Scaping work and adjoining Lodhi road for Common Wealth games 2010- 11",
+    owner: "PWD/ MCD / MBL Infraprojects ltd",
+    cost: "11,65,06,227",
+    commencementDate: "23.12.2009",
+    stipulatedDate: "-",
+    actualDate: "30.09.2010",
+  },
+  {
+    sNo: 12,
+    nameOfWork:
+      "Providing Dense Bituminous macadam (DBM) & Bituminous Concrete (BC) as per technical specificatio",
+    owner: "ERA Infra Engineering Ltd.",
+    cost: "5,53,75,109",
+    commencementDate: "24.11.2010",
+    stipulatedDate: "-",
+    actualDate: "-",
+  },
+  {
+    sNo: 13,
+    nameOfWork:
+      "Work order for the execution Bitumen Macadam, Bituminous Concrete, Prime coat & tack coat includin",
+    owner: "GMR DIAL, New India Infra Buildtech Limited",
+    cost: "7,30,27,500",
+    commencementDate: "20.06.2010",
+    stipulatedDate: "-",
+    actualDate: "-",
+  },
+  {
+    sNo: 14,
+    nameOfWork:
+      'Strengthening of road no.25 (Dev prakash Shastri Marg from T junction Loha Mandi to "R" Block New',
+    owner: "Public Works Department M-111 R.R. Lines, Dhaulakuan, New Delhi",
+    cost: "6,12,05,951",
+    commencementDate: "15.02.2010",
+    stipulatedDate: "14-05-2010",
+    actualDate: "20-11-2010",
+  },
+  {
+    sNo: 15,
+    nameOfWork:
+      "C/o Cycle track from Loni flyover to Bhapura Border on road no.63",
+    owner: "Public Works Department M-213, Shastri Park, New Delhi",
+    cost: "4,73,80,312",
+    commencementDate: "06.05.2009",
+    stipulatedDate: "05.11.2009",
+    actualDate: "17.04.2010",
+  },
+  {
+    sNo: 16,
+    nameOfWork:
+      "Bituminous Macadam, Dense Bituminous Macadam, Dense Bitumin",
+    owner:
+      "GMR Group / LARSEN & TOUBRO (ECC Division) Terminal 3 and Runway project office, near Centaur Hotel",
+    cost: "5,62,87,335",
+    commencementDate: "1.10.2010",
+    stipulatedDate: "-",
+    actualDate: "31.12.2011",
+  },
+  {
+    sNo: 17,
+    nameOfWork:
+      "Strengthening of road no. 17 (Nelson Mandela Marg) from T Point Baba Gang singh marg to T Point Meh",
+    owner: "PWD/ K.R Anand",
+    cost: "12,81,00,000",
+    commencementDate: "01.05.2010",
+    stipulatedDate: "-",
+    actualDate: "-",
+  },
+  {
+    sNo: 18,
+    nameOfWork:
+      "Bituminous work at Jawaharlal Nehru Stadium parking area.",
+    owner: "Punj Lyod",
+    cost: "10,00,00,000",
+    commencementDate: "01.04.2011",
+    stipulatedDate: "14.09.2004",
+    actualDate: "28.11.2006",
+  },
+  {
+    sNo: 19,
+    nameOfWork:
+      "Construction of Approach road to New Taxi Parking Behind New Udaan Bhawan at IGI Airport New Delhi",
+    owner: "GMR Group/DIAL",
+    cost: "75,60,714",
+    commencementDate: "-",
+    stipulatedDate: "14.09.2004",
+    actualDate: "28.11.2006",
+  },
+  {
+    sNo: 20,
+    nameOfWork:
+      "Strengthening of New Rohtak Road from Faiz road to Zakhira flyover, New Delhi.",
+    owner: "Public Works Department M-111 R.R. Lines, Dhaulakuan, New Delhi",
+    cost: "9,01,22,170",
+    commencementDate: "1.10.2012",
+    stipulatedDate: "31.1.2013",
+    actualDate: "22.4.2013",
+  },
+  {
+    sNo: 21,
+    nameOfWork:
+      "Strengthening of Najafgarh Road (Shivaji Marg) From Raja Garden to Zakhira",
+    owner: "Public Works Department M-111 R.R. Lines, Dhaulakuan, New Delhi",
+    cost: "21,65,67,909",
+    commencementDate: "30.10.2012",
+    stipulatedDate: "30.04.2013",
+    actualDate: "05.10.2013",
+  },
+  {
+    sNo: 22,
+    nameOfWork:
+      "Strengthening of Najafgarh Jharoda Road upto Bahadurgarh Border New Delhi",
+    owner: "Public Works Department M-142, New Delhi",
+    cost: "15,66,40,907",
+    commencementDate: "04.10.2012",
+    stipulatedDate: "03.08.2013",
+    actualDate: "09.09.2013",
+  },
+  {
+    sNo: 23,
+    nameOfWork:
+      "Strengthening of Faiz road (From New Rohtak Road to PUSARoad) New Delhi.",
+    owner: "Public Works Department M-111 R.R. Lines, Dhaulakuan, New Delhi",
+    cost: "3,20,02,196",
+    commencementDate: "1.10.2012",
+    stipulatedDate: "31.01.2013",
+    actualDate: "15.07.2013",
+  },
+  {
+    sNo: 24,
+    nameOfWork:
+      "Strengthening Signage work and upgradation of street light in Rohini sector-18 interconnecting roads transferred to PWD from MCD, Delhi. (SH: Strengthening of Road)",
+    owner: "Public Works Department M-311, Mukarba Chowk, New Delhi",
+    cost: "2,49,69,335",
+    commencementDate: "9.12.2012",
+    stipulatedDate: "8.03.2013",
+    actualDate: "05.07.2013",
+  },
+  {
+    sNo: 25,
+    nameOfWork:
+      'Strengthening of internal roads of Vasant kunj Area - i.e. (1) DAV school road from Aruna asaf Ali road to delhi jal board tube well (2) B-1 Telephone exchange road from Mehrauli road to B-5 & B-6 road -1, B-2 & B-3 Road from Shiv mandir to B-5 & B-6 road (4) D-1 & D-2 road from MV road to ILBS Hospital (5) Sports complex road from ILBS Hospital to MV Road (6) Vashu Road from MM Road to DPS School."',
+    owner: "Public Works Department M-113 Bazar Square, Dhaulakuan, New Delhi",
+    cost: "3,93,92,548",
+    commencementDate: "11.01.2013",
+    stipulatedDate: "10.5.2013",
+    actualDate: "04.09.2013",
+  },
+  {
+    sNo: 26,
+    nameOfWork:
+      "Strengthening and Upgradation of Street Lighting of Bahadurgarh road , New Delhi.( SH:Civil work)",
+    owner: "Public Works Department M-413, New Delhi",
+    cost: "2,05,43,733",
+    commencementDate: "21.12.2012",
+    stipulatedDate: "20.04.2013",
+    actualDate: "05.10.2013",
+  },
+  {
+    sNo: 27,
+    nameOfWork:
+      "Strengthening / widening of carriageway and renovation of footpath on Gurudwara road from (RD- 0 to RD550 mtr) Delhi",
+    owner: "Public Works Department M-412, New Delhi",
+    cost: "1,00,17,417",
+    commencementDate: "11.01.2013",
+    stipulatedDate: "11.03.2013",
+    actualDate: "3.10.2013",
+  },
+  {
+    sNo: 28,
+    nameOfWork:
+      "Improvement and Strengthening of Bharat Nagar Road from Gulab Singh Marg to Swami Narayan Marg. (S.H: Strengthening of road and improvement of footpath & Drain.)",
+    owner: "Public Works Department M-313, New Delhi",
+    cost: "6,04,61,724",
+    commencementDate: "30.03.2013",
+    stipulatedDate: "24.12.2013",
+    actualDate: "21.03.2014",
+  },
+  {
+    sNo: 29,
+    nameOfWork:
+      "Widening of Goyla Deenpur Road from 2 lane to 4 lane on one side and profile correction of existing road from Ch. 550 to 1850 m",
+    owner: "Public Works Department M-143, New Delhi",
+    cost: "4,23,93,901",
+    commencementDate: "30.08.2013",
+    stipulatedDate: "27.01.2014",
+    actualDate: "30.05.2014",
+  },
+  {
+    sNo: 30,
+    nameOfWork:
+      "Improvement of Burari Road from Kingsway Camp to Road No. 56 (S.H: Strengthening of road, improvement of footpath & drain).",
+    owner: "Public Works Department M-313, New Delhi",
+    cost: "16,64,43,466",
+    commencementDate: "20.03.2013",
+    stipulatedDate: "14.12.2013",
+    actualDate: "14.07.2014",
+  },
+  {
+    sNo: 31,
+    nameOfWork:
+      "Improvement of carriageway, footpath and storm water drain of Roshnara Road from Malka Ganj Chowk to Puli Bangash Metro Station. (SH: Strengthening of road, improvement of footpath and drain).",
+    owner: "Public Works Department M-312, New Delhi",
+    cost: "6,06,09,324",
+    commencementDate: "05.04.2013",
+    stipulatedDate: "30.12.2013",
+    actualDate: "09.10.2014",
+  },
+  {
+    sNo: 32,
+    nameOfWork:
+      "Strengthening of roads Improvement of footpath and drain providing and fixing retro reflective signage upgradation of street light and horticulture work of various roads in South Pitam Pura Delhi under PWD Zone M-3. SH: Strengthening of roads and improvement of footpath and drain",
+    owner: "Public Works Department M-311, New Delhi",
+    cost: "14,28,70,327",
+    commencementDate: "02.02.2013",
+    stipulatedDate: "01.08.2013",
+    actualDate: "09.07.2014",
+  },
+  {
+    sNo: 33,
+    nameOfWork:
+      "Strengthening of Subhash Nagar X-ing to Rajouri Apartment (Maya Puri Road) dg.2013-14/NewDelhi",
+    owner: "Public Works Department M-111, New Delhi",
+    cost: "6,90,05,943",
+    commencementDate: "02.01.2014",
+    stipulatedDate: "01.05.2014",
+    actualDate: "25.07.2014",
+  },
+  {
+    sNo: 34,
+    nameOfWork:
+      "Construction of footpath and improvement of road surface of Mandi road NewDelhi",
+    owner: "Public Works Department M-442, New Delhi",
+    cost: "4,29,02,872",
+    commencementDate: "03.06.2014",
+    stipulatedDate: "02.08.2014",
+    actualDate: "15.01.2015",
+  },
+  {
+    sNo: 35,
+    nameOfWork:
+      "Rehabilitation of Taxiway 'C' at Indira Gandhi International Airport, NewDelhi",
+    owner: "GMR, IGI Airport, New Delhi",
+    cost: "1,88,06,200",
+    commencementDate: "03.08.2015",
+    stipulatedDate: "02.11.2015",
+    actualDate: "02.11.2015",
+  },
+  {
+    sNo: 36,
+    nameOfWork: "Micro Surfacing work at SIDCUL, Haridwar, Uttarakhand",
+    owner: "UPRNN Ltd. Nirman, Dehradun",
+    cost: "4,00,85,000",
+    commencementDate: "20.11.2015",
+    stipulatedDate: "31.01.2016",
+    actualDate: "03.11.2016",
+  },
+  {
+    sNo: 37,
+    nameOfWork:
+      "Rehabilitation of Airside Pavements and Associated Works at Indira Gandhi International Airport, NewDelhi",
+    owner: "GMR, IGI Airport, New Delhi",
+    cost: "12,48,53,651",
+    commencementDate: "03.10.2015",
+    stipulatedDate: "02.10.2016",
+    actualDate: "03.10.2016",
+  },
+  {
+    sNo: 38,
+    nameOfWork:
+      "Improvement & Maintenance of Roads and Drains at Jhilmil Industrial Area Block'A' & 'B'.",
+    owner:
+      "Executive Engineer DSIIDC (CD-19) A. Lajpat Nagar, New Delhi",
+    cost: "16,74,22,858",
+    commencementDate: "03.01.2015",
+    stipulatedDate: "02.01.2016",
+    actualDate: "25.07.2016",
+  },
+  {
+    sNo: 39,
+    nameOfWork:
+      "Redevelopment & Maintenance of Roads Industrial Area. Upgradation of roads & drains etc. G.T. Karnal Road Industrial Area.",
+    owner:
+      "Executive Engineer DSIIDC (CD-19) A. Lajpat Nagar, New Delhi",
+    cost: "8,79,01,005",
+    commencementDate: "18.12.2015",
+    stipulatedDate: "17.09.2016",
+    actualDate: "29.09.2016",
+  },
+  {
+    sNo: 40,
+    nameOfWork:
+      "Operation and Maintenance of existing 4 lane Highway of Vadape to Gonde Section - Carrying out Micro Surfacing work(Type - II) on ProjectHighway.",
+    owner: "Mumbai Nasik Expressway Ltd.",
+    cost: "3,49,37,565",
+    commencementDate: "21.04.2016",
+    stipulatedDate: "15.05.2016",
+    actualDate: "08.08.2016",
+  },
+  {
+    sNo: 41,
+    nameOfWork:
+      "Construction of DBM/BC works including transportation laying and compaction from KM107.00 to 154.00",
+    owner: "Sattar Engineering & Contractors Co. Ltd.",
+    cost: "1,39,50,000",
+    commencementDate: "05.01.2017",
+    stipulatedDate: "-",
+    actualDate: "-",
+  },
+  {
+    sNo: 42,
+    nameOfWork:
+      "Refurbishment of Terminal T-2 at IGI Airport, New Delhi Airside Civil Works at T-2 Apron Areas.",
+    owner: "GMR, IGI Airport, New Delhi",
+    cost: "2,03,59,784",
+    commencementDate: "06.08.2016",
+    stipulatedDate: "06.08.2016",
+    actualDate: "-",
+  },
+  {
+    sNo: 43,
+    nameOfWork:
+      "Improvement of Ring Road from AIIMS to Hyatt Regency & Africa Avenue Road under PWD(South Zone)NewDelhi",
+    owner: "Executive Engineer, PWD Division M-113(N) New Delhi",
+    cost: "4,63,91,635",
+    commencementDate: "14.10.2015",
+    stipulatedDate: "13.11.2015",
+    actualDate: "04.04.2016",
+  },
+  {
+    sNo: 44,
+    nameOfWork:
+      "Micro Surfacing & Road Marking by Thermoplastic paint at NH - 24 Marginal Bundh Road and VikasMarg in Patches",
+    owner: "Executive Engineer, PWD Division M-212 New Delhi",
+    cost: "1,94,01,915",
+    commencementDate: "18.11.2015",
+    stipulatedDate: "06.11.2015",
+    actualDate: "05.11.2016",
+  },
+];
+

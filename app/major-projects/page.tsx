@@ -1,239 +1,243 @@
 import React from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import PageHeader from "@/components/ui/PageHeader";
-import SectionContainer from "@/components/layout/SectionContainer";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Card from "@/components/ui/Card";
-import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
-import ProjectCard from "@/components/ui/ProjectCard";
-import CTASection from "@/components/ui/CTASection";
-import { getMajorProjects } from "@/data/projects";
+import Container from "@/components/layout/Container";
+import Breadcrumb from "@/components/layout/Breadcrumb";
+import {
+  MAJOR_WORK_DONE_LIST,
+  TOTAL_MAJOR_WORK_DONE_VALUE,
+} from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Major Landmark Projects",
+  title: "List of Major Projects Done | C P Arora Engineers & Contractors",
   description:
-    "Flagship civil infrastructure achievements: Indira Gandhi International Airport runway overlays, NH-16 Odisha corridor, and Delhi–Gurugram Expressway modernization.",
-  keywords: [
-    "C P Arora Major Projects",
-    "Delhi Airport Runway Overlays",
-    "NH-16 Odisha Widening",
-    "Delhi Gurugram Expressway Paving",
-    "Landmark Civil Engineering",
-  ],
-  openGraph: {
-    title: "Major Landmark Projects | C P Arora Engineers & Contractors",
-    description:
-      "Flagship civil infrastructure achievements: Indira Gandhi International Airport runway overlays, NH-16 Odisha corridor, and Delhi–Gurugram Expressway modernization.",
-    url: "https://cparora.com/major-projects",
-    siteName: "C P Arora",
-    images: [
-      {
-        url: "/images/projects/gmr1.jpg",
-        width: 795,
-        height: 534,
-        alt: "Delhi Airport Runway Pavement Overlays",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
+    "Comprehensive track record of 44 major infrastructure contracts completed across national highways, airport runways, and urban road networks by C P Arora Engineers & Contractors Pvt. Ltd.",
 };
 
 export default function MajorProjectsPage() {
-  const majorProjects = getMajorProjects();
-  const featuredFlagships = majorProjects.slice(0, 2);
-  const supportingLandmarks = majorProjects.slice(2);
-
   return (
-    <div className="flex-1 flex flex-col bg-cpa-offwhite">
+    <div className="flex-1 flex flex-col bg-[#042552] text-white">
       {/* ========================================================= */}
-      {/* 1. SHARED PAGE HEADER                                     */}
+      {/* 1. LIST OF MAJOR WORK DONE (HERO & COMPREHENSIVE SCHEDULE) */}
       {/* ========================================================= */}
-      <PageHeader
-        theme="navy"
-        badge="Landmark Projects"
-        eyebrow="Major Achievements"
-        title="List of Major Projects Done"
-        description="Our flagship road construction achievements, airport runway resurfacing under night hours, and high-capacity national highway corridors across India."
-        breadcrumbs={[
-          { label: "Projects", href: "/projects" },
-          { label: "List of Major Projects Done" },
-        ]}
-        actions={
-          <>
-            <Button href="/contact-us" variant="gold" size="md">
-              Contact Our Team &rarr;
-            </Button>
-            <Button href="/projects" variant="outline-light" size="md">
-              View All Projects
-            </Button>
-          </>
-        }
-      />
-
-      {/* ========================================================= */}
-      {/* 2. EDITORIAL FEATURED FLAGSHIP SHOWCASE                    */}
-      {/* ========================================================= */}
-      <SectionContainer theme="white" padding="lg">
-        <SectionHeading
-          eyebrow="Featured Projects"
-          title="Major Infrastructure Projects"
-          description="High-precision airport runway works and multi-lane national expressway widening."
-        />
-
-        <div className="space-y-12">
-          {featuredFlagships.map((project, idx) => (
-            <Card
-              key={project.id}
-              variant="default"
-              className="p-6 sm:p-8 lg:p-10 border border-cpa-surface-border hover:border-cpa-gold/60 transition-all"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                {/* Visual Media Column (5 cols) — 100% clean photo, zero text on image */}
-                <div className={`lg:col-span-5 ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className="relative aspect-[16/10] w-full rounded-sm overflow-hidden bg-cpa-navy shadow-card border border-cpa-surface-border">
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.imageAlt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Details Column (7 cols) */}
-                <div className={`lg:col-span-7 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <span className="inline-flex items-center gap-1.5 font-mono uppercase tracking-wider text-[11px] font-bold rounded-sm bg-[#FAF4E6] text-[#785E23] border border-cpa-gold/50 px-2.5 py-0.5">
-                      <span className="text-cpa-gold text-xs leading-none">&#9733;</span>
-                      <span>Landmark</span>
-                    </span>
-                    <span className="inline-block px-2.5 py-0.5 text-[10px] font-mono tracking-widest uppercase bg-cpa-navy/5 text-cpa-navy border border-cpa-surface-border rounded-sm font-semibold">
-                      {project.category}
-                    </span>
-                  </div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-cpa-gold font-bold block mb-1">
-                    {project.location}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-cpa-navy font-sans tracking-tight mb-4">
-                    {project.title}
-                  </h2>
-
-                  <p className="text-sm sm:text-base text-cpa-text-secondary leading-relaxed mb-6 font-normal">
-                    {project.summary}
-                  </p>
-
-                  <div className="mb-6 p-4 rounded-sm bg-cpa-offwhite border border-cpa-surface-border">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-cpa-navy font-bold block mb-2">
-                      Key Work Done:
-                    </span>
-                    <ul className="space-y-1.5 text-xs text-cpa-text-primary">
-                      {project.technicalScope.map((scope, sIdx) => (
-                        <li key={sIdx} className="flex items-start gap-2">
-                          <span className="text-cpa-gold font-bold">&bull;</span>
-                          <span>{scope}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="pt-4 border-t border-cpa-surface-border flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-cpa-text-muted">
-                    {project.client && (
-                      <div>
-                        <span className="text-cpa-text-muted uppercase">Client / Authority: </span>
-                        <span className="text-cpa-navy font-semibold">{project.client}</span>
-                      </div>
-                    )}
-                    {project.specification && (
-                      <div>
-                        <span className="text-cpa-text-muted uppercase">Standard: </span>
-                        <span className="text-cpa-navy font-semibold">{project.specification}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </SectionContainer>
-
-      {/* ========================================================= */}
-      {/* 3. SUPPORTING LANDMARK INFRASTRUCTURE CONTRACTS           */}
-      {/* ========================================================= */}
-      <SectionContainer theme="offwhite" padding="lg">
-        <SectionHeading
-          eyebrow="More Projects"
-          title="More Landmark Road &amp; Airport Works"
-          description="Major expressway repairs and airport taxiway civil works."
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {supportingLandmarks.map((project) => (
-            <div key={project.id} className="flex flex-col">
-              <ProjectCard
-                title={project.title}
-                category={project.category}
-                location={project.location}
-                client={project.client}
-                status={project.status}
-                imageUrl={project.imageUrl}
-                imageAlt={project.imageAlt}
-                stats={project.stats}
-              />
-              <div className="bg-cpa-white border-x border-b border-cpa-surface-border p-4 rounded-b-sm -mt-1 flex-1 flex flex-col justify-between">
-                <p className="text-xs text-cpa-text-secondary leading-relaxed mb-3">
-                  {project.summary}
-                </p>
-                <div className="pt-2 border-t border-cpa-surface-border flex items-center justify-between text-[11px] font-mono text-cpa-text-muted">
-                  <span>Standard:</span>
-                  <span className="text-cpa-navy font-semibold">{project.specification}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+      <section className="relative bg-[#042552] text-white pt-8 pb-14 sm:pt-12 sm:pb-20 lg:pt-14 lg:pb-24 border-b-4 border-[#fbcac3]/40 overflow-hidden">
+        {/* Subtle Ambient Depth */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[550px] bg-[radial-gradient(ellipse_at_top,rgba(251,202,195,0.14)_0%,rgba(4,37,82,0.4)_50%,transparent_75%)]" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
-        {/* Directory Navigation */}
-        <div className="mt-12 pt-6 border-t border-cpa-surface-border flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-cpa-text-secondary">
-          <div className="flex items-center gap-4">
-            <Link href="/projects" className="hover:text-cpa-gold transition-colors">
-              &larr; All Projects
-            </Link>
-            <span>&bull;</span>
-            <Link href="/ongoing-projects" className="hover:text-cpa-gold transition-colors">
-              &rarr; Ongoing Projects
-            </Link>
-            <span>&bull;</span>
-            <Link href="/executed-projects" className="hover:text-cpa-gold transition-colors">
-              &rarr; Completed Projects
-            </Link>
+        <Container className="relative z-10">
+          {/* Breadcrumb Navigation */}
+          <div className="mb-6 sm:mb-8">
+            <Breadcrumb
+              theme="dark"
+              items={[
+                { label: "Projects", href: "/projects" },
+                { label: "List of Major Projects Done" },
+              ]}
+            />
           </div>
-          <span className="text-cpa-text-muted">Class-I Quality &amp; Safety Standards</span>
-        </div>
-      </SectionContainer>
 
-      {/* ========================================================= */}
-      {/* 4. INSTITUTIONAL CALL TO ACTION                           */}
-      {/* ========================================================= */}
-      <CTASection
-        eyebrow="Work With Us &bull; Partnerships"
-        title="Partner with Us on Major Road Projects"
-        description="Contact our engineering team for highway tenders, airport runway resurfacing, and road construction projects across India."
-        primaryAction={{
-          label: "Contact Our Team",
-          href: "/contact-us",
-        }}
-        secondaryAction={{
-          label: "View All Projects",
-          href: "/projects",
-        }}
-        theme="navy"
-      />
+          {/* Section Heading — 1000% Liquid Glass Hero Capsule */}
+          <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-14 flex flex-col items-center">
+            {/* Liquid Glass Capsule Chassis */}
+            <div className="relative group inline-flex flex-col items-center px-8 sm:px-14 py-5 sm:py-7 rounded-3xl bg-gradient-to-b from-white/[0.12] via-white/[0.05] to-white/[0.02] backdrop-blur-3xl border border-white/25 shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1.5px_0_0_rgba(255,255,255,0.5),inset_0_-1px_0_0_rgba(255,255,255,0.1)] overflow-hidden transition-all duration-500 hover:border-white/35">
+              {/* Top Specular Rim Reflection Sheen */}
+              <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/95 to-transparent pointer-events-none" />
+
+              {/* Ambient Prismatic Glow Inside Glass */}
+              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-gradient-to-b from-white/25 via-[#fbcac3]/10 to-transparent rounded-full blur-2xl pointer-events-none" />
+
+              {/* Eyebrow Liquid Badge */}
+              <div className="relative z-10 inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-[#fbcac3] text-[11px] font-mono uppercase tracking-[0.2em] font-semibold mb-2.5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.3)]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#fbcac3] animate-pulse" />
+                <span>Historical Track Record &bull; 44 Landmark Contracts</span>
+              </div>
+
+              {/* The Heading */}
+              <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl font-extrabold font-sans tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-200 drop-shadow-[0_2px_12px_rgba(255,255,255,0.3)]">
+                List of major work done
+              </h1>
+
+              {/* Liquid Divider Bar */}
+              <div className="relative z-10 flex items-center justify-center gap-2.5 mt-3 sm:mt-4">
+                <div className="w-10 sm:w-16 h-0.5 bg-gradient-to-r from-transparent to-[#fbcac3]" />
+                <div className="relative flex items-center justify-center">
+                  <div className="w-2.5 h-2.5 rotate-45 bg-[#fbcac3] shadow-[0_0_10px_#fbcac3]" />
+                  <div className="absolute inset-0 rotate-45 bg-white/60 animate-ping opacity-40" />
+                </div>
+                <div className="w-10 sm:w-16 h-0.5 bg-gradient-to-l from-transparent to-[#fbcac3]" />
+              </div>
+
+              {/* Bottom Liquid Edge Line */}
+              <div className="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          {/* Quick Metrics Bar */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-8 sm:mb-10">
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-center">
+              <span className="block text-[11px] font-mono uppercase text-[#fbcac3] tracking-wider mb-1">
+                Total Documented Contracts
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold text-white font-sans">
+                44 Projects
+              </span>
+            </div>
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-center">
+              <span className="block text-[11px] font-mono uppercase text-[#fbcac3] tracking-wider mb-1">
+                Cumulative Gross Value
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold text-[#fbcac3] font-mono">
+                ₹ 518.95 Cr
+              </span>
+            </div>
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-center">
+              <span className="block text-[11px] font-mono uppercase text-[#fbcac3] tracking-wider mb-1">
+                Largest Single Contract
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold text-white font-mono">
+                ₹ 100.67 Cr
+              </span>
+            </div>
+            <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/10 text-center">
+              <span className="block text-[11px] font-mono uppercase text-[#fbcac3] tracking-wider mb-1">
+                Key Government Clients
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold text-white font-sans">
+                NHAI &bull; PWD &bull; DIAL
+              </span>
+            </div>
+          </div>
+
+          {/* Table Chassis Container */}
+          <div className="w-full">
+            <div className="relative rounded-2xl bg-white shadow-[0_25px_60px_rgba(0,0,0,0.45)] border-4 border-[#fbcac3] overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs sm:text-[13px] border-collapse min-w-[1000px]">
+                  {/* Table Header with signature #fbcac3 pink styling matching slides */}
+                  <thead>
+                    <tr className="bg-gradient-to-r from-[#fedcd7] via-[#fbcac3] to-[#fedcd7] border-b-2 border-[#f2b5a9] text-[#042552]">
+                      <th
+                        scope="col"
+                        className="py-4 px-3 sm:px-4 text-center font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs w-12 border-r border-[#042552]/15"
+                      >
+                        S.No
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-4 sm:px-6 font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs border-r border-[#042552]/15 min-w-[340px]"
+                      >
+                        Name Of Work/ Project &amp; Location
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-4 sm:px-6 font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs border-r border-[#042552]/15 min-w-[220px]"
+                      >
+                        Owner Or Sponsoring Organisation
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-4 sm:px-6 text-right font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs border-r border-[#042552]/15 min-w-[160px]"
+                      >
+                        Cost Of Work (In Rs. /Gross Work Done)
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-3 sm:px-4 text-center font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs border-r border-[#042552]/15 min-w-[110px]"
+                      >
+                        Date Of Commencement
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-3 sm:px-4 text-center font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs border-r border-[#042552]/15 min-w-[110px]"
+                      >
+                        Stipulated Date Of Completion
+                      </th>
+                      <th
+                        scope="col"
+                        className="py-4 px-3 sm:px-4 text-center font-sans font-extrabold text-[#042552] uppercase tracking-wider text-[11px] sm:text-xs min-w-[110px]"
+                      >
+                        Actual Date Of Completion
+                      </th>
+                    </tr>
+                  </thead>
+
+                  {/* Table Body: 44 Rows */}
+                  <tbody className="divide-y divide-[#042552]/10 bg-white">
+                    {MAJOR_WORK_DONE_LIST.map((row, index) => (
+                      <tr
+                        key={row.sNo}
+                        className={`transition-colors duration-150 hover:bg-[#fbcac3]/20 ${
+                          index % 2 === 0 ? "bg-white" : "bg-[#fcf7f6]"
+                        }`}
+                      >
+                        <td className="py-3 px-3 sm:px-4 text-center font-mono font-bold text-[#042552] border-r border-[#042552]/10 text-xs">
+                          {row.sNo}
+                        </td>
+                        <td className="py-3 px-4 sm:px-5 font-normal text-[#1C1917] border-r border-[#042552]/10 leading-relaxed text-xs sm:text-[13px]">
+                          {row.nameOfWork}
+                        </td>
+                        <td className="py-3 px-4 sm:px-5 font-medium text-[#042552] border-r border-[#042552]/10 leading-snug text-xs sm:text-[13px]">
+                          {row.owner}
+                        </td>
+                        <td className="py-3 px-4 sm:px-6 text-right font-mono font-bold text-[#042552] border-r border-[#042552]/10 whitespace-nowrap tabular-nums text-xs sm:text-[13px]">
+                          ₹ {row.cost}
+                        </td>
+                        <td className="py-3 px-3 sm:px-4 text-center font-mono text-[#042552]/80 border-r border-[#042552]/10 whitespace-nowrap text-xs">
+                          {row.commencementDate}
+                        </td>
+                        <td className="py-3 px-3 sm:px-4 text-center font-mono text-[#042552]/80 border-r border-[#042552]/10 whitespace-nowrap text-xs">
+                          {row.stipulatedDate}
+                        </td>
+                        <td className="py-3 px-3 sm:px-4 text-center font-mono text-[#042552]/80 whitespace-nowrap text-xs">
+                          {row.actualDate}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+
+                  {/* Table Footer with Aggregate Portfolio Total */}
+                  <tfoot>
+                    <tr className="bg-gradient-to-r from-[#fedcd7] via-[#fbcac3] to-[#fedcd7] border-t-2 border-[#f2b5a9] text-[#042552]">
+                      <td
+                        colSpan={3}
+                        className="py-4 px-6 text-center sm:text-right font-sans font-black uppercase tracking-widest text-[#042552] text-xs sm:text-sm"
+                      >
+                        TOTAL (44 MAJOR PROJECTS):
+                      </td>
+                      <td className="py-4 px-6 text-right font-mono font-black text-sm sm:text-base text-[#042552] whitespace-nowrap tabular-nums border-r border-[#042552]/15">
+                        ₹ {TOTAL_MAJOR_WORK_DONE_VALUE}
+                      </td>
+                      <td
+                        colSpan={3}
+                        className="py-4 px-4 text-center font-mono font-bold text-[#042552]/80 text-xs sm:text-sm"
+                      >
+                        (518.95 Crore Cumulative Gross Work Done)
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+              {/* Bottom Subtle Sheen */}
+              <div className="absolute bottom-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#fbcac3]/40 to-transparent pointer-events-none" />
+            </div>
+
+            {/* Mobile Scroll Indicator */}
+            <div className="mt-3 text-center sm:hidden text-[11px] font-mono text-slate-400">
+              &larr; Scroll horizontally to view complete table breakdown &rarr;
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 }
