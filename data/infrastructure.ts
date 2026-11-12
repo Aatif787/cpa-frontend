@@ -1,3 +1,81 @@
+export interface PlantMachineryItem {
+  id: string;
+  title: string;
+  image: string;
+  alt: string;
+  column: "left" | "right";
+  order: number;
+}
+
+export const PLANTS_AND_MACHINERY: PlantMachineryItem[] = [
+  // Left Column
+  {
+    id: "crush-metro-1",
+    title: "Crush Metro 220TPH",
+    image: "/images/fleet/machinery1.jpg",
+    alt: "Crush Metro 220TPH Crushing Plant & Aggregate Conveyor",
+    column: "left",
+    order: 1,
+  },
+  {
+    id: "hot-mix-1",
+    title: "Hot Mix Plant (Batch Type)",
+    image: "/images/fleet/machinery3.jpg",
+    alt: "Hot Mix Plant (Batch Type) Mixing Tower & Facility",
+    column: "left",
+    order: 2,
+  },
+  {
+    id: "hot-mix-2",
+    title: "Hot Mix Plant (Batch Type)",
+    image: "/images/fleet/machinery5.jpg",
+    alt: "Hot Mix Plant (Batch Type) Stationary Asphalt Mixing Plant",
+    column: "left",
+    order: 3,
+  },
+  {
+    id: "kyc-conmat-1",
+    title: "KYC Conmat (Batching Plant) 75cum",
+    image: "/images/fleet/machinery7.jpg",
+    alt: "KYC Conmat (Batching Plant) 75cum Concrete Mixing Facility with Transit Mixer",
+    column: "left",
+    order: 4,
+  },
+  // Right Column
+  {
+    id: "crush-metro-2",
+    title: "Crush Metro 220TPH",
+    image: "/images/fleet/machinery2.jpg",
+    alt: "Crush Metro 220TPH Crushing Plant Aerial View with Stockpiles",
+    column: "right",
+    order: 1,
+  },
+  {
+    id: "hot-mix-3",
+    title: "Hot Mix Plant (Batch Type)",
+    image: "/images/fleet/machinery4.jpg",
+    alt: "Hot Mix Plant (Batch Type) Continuous Asphalt Plant Operations",
+    column: "right",
+    order: 2,
+  },
+  {
+    id: "kyc-conmat-2",
+    title: "KYC Conmat (Batching Plant) 75cum",
+    image: "/images/fleet/machinery6.jpg",
+    alt: "KYC Conmat (Batching Plant) 75cum Batching Tower & Cement Silos",
+    column: "right",
+    order: 3,
+  },
+  {
+    id: "rmc-plant",
+    title: "RMC Plant,",
+    image: "/images/fleet/machinery8.jpg",
+    alt: "RMC Plant, Ready Mix Concrete Staging & Aggregate Facility",
+    column: "right",
+    order: 4,
+  },
+];
+
 export interface FleetItem {
   id: string;
   title: string;
@@ -149,10 +227,10 @@ export const FLEET_ITEMS: FleetItem[] = [
     image: "/images/fleet/m11.jpg",
     alt: "Heavy vibratory single drum soil compactor stenciled C P Arora compacting subgrade",
     description:
-      "Heavy soil compactor roller with a steel vibratory drum and high-traction tires, used for compacting ground layers and road foundations.",
+      "High-amplitude single drum roller used for compacting subgrades, stone aggregate layers, and road foundations.",
     verifiedDetails: [
-      "Type: Articulated single drum vibratory soil compactor",
-      "Branding: C P Arora corporate stencil",
+      "Drum: Smooth steel drum with high dynamic compaction force",
+      "Branding: C P Arora stencil applied on chassis body",
       "Deployment: Subgrade, granular sub-base & airfield embankment compaction",
       "Drive: Heavy rear pneumatic drive tyres with all-terrain traction",
     ],
@@ -179,44 +257,28 @@ export const FLEET_ITEMS: FleetItem[] = [
     category: "concrete",
     categoryLabel: "Concrete Fleet",
     image: "/images/fleet/machinery6.jpg",
-    alt: "KYB-Conmat concrete batching plant with twin cement silos and transit mixer loading",
+    alt: "KYB-Conmat concrete batch mix plant with vertical cement silos and transit truck loading",
     description:
-      "Stationary concrete batching plant by KYB-Conmat with twin cement silos, automatic mixer, and on-site generator power.",
+      "Concrete batch mix plant with vertical cement silos, aggregate transfer conveyors, and automated batching for airport and bridge works.",
     verifiedDetails: [
-      "Manufacturer: KYB-Conmat Concrete Technologies",
-      "Storage: Twin vertical bulk cement and flyash storage silos",
-      "Auxiliary Power: Skid-mounted acoustic enclosed diesel generator",
-      "Output: Structural grade concrete for bridges, culverts & rigid pavements",
+      "Brand: KYB-Conmat Stationary Concrete Plant",
+      "Silos: Twin vertical bulk cement and fly-ash storage silos",
+      "Mix Quality: Electronic load-cell aggregate weighing",
+      "Application: PQC concrete for runways, expressways & major structures",
     ],
   },
   {
     id: "machinery7",
-    title: "Ready-Mix Batching Tower & CPA Mixer Truck",
+    title: "CPA Transit Mixer Fleet Charging Unit",
     category: "concrete",
     categoryLabel: "Concrete Fleet",
     image: "/images/fleet/machinery7.jpg",
-    alt: "Concrete batching plant with cement silo and CPA transit mixer unit 12",
+    alt: "CPA branded concrete transit mixer truck loading under batch plant chute",
     description:
-      "Concrete batching tower with bulk storage silos and automated chute for fast loading into transit mixer trucks.",
+      "Transit mixer truck fleet for transporting fresh concrete from batching plants directly to highway and runway paving sites.",
     verifiedDetails: [
-      "Fleet Unit: CPA Tata Transit Mixer Unit #12",
-      "Branding: CPA insignia on truck sun-visor",
-      "Components: Bulk vertical silo, screw feeder, overhead discharge chute",
-      "Application: Structural concrete delivery to active project sites",
-    ],
-  },
-  {
-    id: "m4",
-    title: "CPA Transit Mixer Concrete Transport Fleet",
-    category: "concrete",
-    categoryLabel: "Concrete Fleet",
-    image: "/images/fleet/m4.jpg",
-    alt: "Fleet of white Tata transit mixers with CPA branding lined up in staging yard",
-    description:
-      "Dedicated fleet of company-owned Tata transit mixer trucks that keep concrete mixed and fresh while driving to construction sites.",
-    verifiedDetails: [
-      "Fleet: Dedicated fleet of Tata concrete transit mixers",
-      "Branding: CPA stenciled on cab fronts with individual unit IDs (#1, #2, etc.)",
+      "Fleet Type: Heavy-duty transit mixer trucks stenciled C P Arora",
+      "Function: Fresh concrete transport under continuous drum rotation",
       "Capacity: Heavy-duty multi-axle chassis with auxiliary-driven drums",
       "Readiness: Mobilized for municipal structures, runway paving & rigid slabs",
     ],
@@ -243,157 +305,93 @@ export const FLEET_ITEMS: FleetItem[] = [
     category: "milling-earthwork",
     categoryLabel: "Milling Fleet",
     image: "/images/fleet/m1.jpg",
-    alt: "Cold milling machine loading reclaimed asphalt into CPA multi-axle tipper on runway",
+    alt: "Cold milling machine with discharge conveyor stripping runway asphalt into CPA tipper",
     description:
-      "High-output cold milling machine that shaves off old road surfaces to the exact depth and loads the milled asphalt directly into dump trucks.",
+      "Track-mounted cold milling machine used to remove old, damaged asphalt layers with high precision without harming the road base.",
     verifiedDetails: [
-      "Operation: Precision asphalt milling on airport runway / highway corridor",
-      "Tipper Truck: CPA multi-axle dump truck #5 with full corporate livery",
-      "Discharge: High-capacity front loading conveyor belt",
-      "Sustainability: RAP recycling and milling without damaging base course",
+      "Equipment: Track-mounted asphalt cold milling planer",
+      "Discharge: High-angle folding front discharge conveyor",
+      "Precision: Automatic grade sensing for mill-and-fill operations",
+      "Application: Runway resurfacing at Delhi IGI Airport and expressway rehabilitation",
     ],
   },
   {
     id: "machinery2",
-    title: "Mobile Aggregate Crushing & Screening Plant",
-    category: "milling-earthwork",
-    categoryLabel: "Crushing & Screening",
+    title: "Primary & Secondary Stone Aggregate Crushing Plant",
+    category: "hot-mix",
+    categoryLabel: "Aggregate Processing",
     image: "/images/fleet/machinery2.jpg",
-    alt: "Mobile aggregate crushing and multi-deck screening plant with conveyor discharge stockpiles",
+    alt: "Crush Metro 220TPH aggregate crushing and screening plant with dual stockpiling conveyors",
     description:
-      "Mobile crushing and screening plant that crushes stones and separates them into precise aggregate sizes for asphalt and concrete.",
+      "Crush Metro 220TPH stone crushing and screening plant producing graded stone aggregates for asphalt and concrete production.",
     verifiedDetails: [
-      "Equipment: Multi-stage aggregate crushing & sizing plant",
-      "Conveyors: Multi-directional radial discharge conveyor belts",
-      "Grading: Simultaneously separates into multi-fraction aggregate stockpiles",
-      "Application: Specification-compliant aggregate production for IRC/MoRTH mixes",
+      "Configuration: Jaw crusher primary + cone crusher secondary + multi-deck vibrating screen",
+      "Capacity: 220 TPH (Tonnes Per Hour) continuous throughput",
+      "Stockpiling: Radial stacking conveyor systems for graded aggregates",
+      "Quality Assurance: Ensures uniform aggregate grading for bituminous concrete & PQC",
     ],
   },
   {
     id: "machinery8",
-    title: "High-Volume Aggregate Stockpiling & Scraping Unit",
-    category: "milling-earthwork",
-    categoryLabel: "Material Handling",
+    title: "Aggregate Stockpiling & Conveyor Loading Station",
+    category: "hot-mix",
+    categoryLabel: "Aggregate Processing",
     image: "/images/fleet/machinery8.jpg",
-    alt: "Aggregate dragline scraper and stockpiling boom loading batching bins",
+    alt: "High-angle radial conveyor elevating stone aggregates onto batching stockpile",
     description:
-      "Automated aggregate scraper and boom that moves large piles of stone into batching bins quickly and evenly.",
+      "High-angle conveyor and aggregate stockpile management station ensuring continuous feeding to asphalt and concrete mixing plants.",
     verifiedDetails: [
-      "Mechanism: Radial dragline scraper boom with bucket",
-      "Handling: High-volume mineral aggregate stockpiling & bin charging",
-      "Stockpile: Segregated clean stone chips and crushed sand reserves",
-      "Efficiency: Continuous automated feed into batching bins",
-    ],
-  },
-  {
-    id: "m3",
-    title: "CPA Heavy-Duty Tipper Dump Truck Fleet",
-    category: "auxiliary",
-    categoryLabel: "Transport Fleet",
-    image: "/images/fleet/m3.jpg",
-    alt: "Lineup of yellow BharatBenz multi-axle tippers stenciled CPA in staging yard",
-    description:
-      "Fleet of heavy-duty BharatBenz multi-axle tipper dump trucks for transporting hot asphalt mix, stones, and soil to job sites.",
-    verifiedDetails: [
-      "Fleet: BharatBenz multi-axle heavy-duty tippers",
-      "Branding: CPA 05 windshield banner markings",
-      "Capacity: High-volume thermal-insulated hydraulic tipper bodies",
-      "Deployment: Transporting hot asphalt mix, WMM aggregates & earthwork fill",
-    ],
-  },
-  {
-    id: "m9",
-    title: "CPA Mobile Water Tanker & Bitumen Bowser",
-    category: "auxiliary",
-    categoryLabel: "Site Support",
-    image: "/images/fleet/m9.jpg",
-    alt: "Tata water tanker truck stenciled C P Arora Engineers Contractors Pvt. Ltd.",
-    description:
-      "Multi-purpose water tanker truck used for road curing, roller spray supply, and dust control on construction sites.",
-    verifiedDetails: [
-      "Vehicle: Tata commercial chassis with heavy cylindrical tank body",
-      "Branding: C P Arora Engineers Contractors Pvt. Ltd. stenciled on tank",
-      "Fleet Tag: Unit No. 1",
-      "Function: Subgrade moisture conditioning, roller spray bar supply & site cleaning",
+      "System: High-capacity aggregate belt conveyor with electric drive",
+      "Material: Multi-grade crushed stone aggregate stockpiles",
+      "Feed Role: Continuous aggregate supply for concrete and asphalt batching",
+      "Safety: Guarded pulleys and emergency pull-cord trip switches",
     ],
   },
   {
     id: "m10",
-    title: "Tractor-Towed Mechanical Road Sweeper",
+    title: "Heavy DG Power Generation & Auxiliary Fleet",
     category: "auxiliary",
-    categoryLabel: "Site Support",
+    categoryLabel: "Auxiliary Fleet",
     image: "/images/fleet/m10.jpg",
-    alt: "Tractor towing mechanical rotary road sweeper cleaning highway surface",
+    alt: "Heavy-duty soundproof diesel generator set powering plant site operations",
     description:
-      "Tractor-towed mechanical road sweeper that clears dust and loose gravel from the road before asphalt is laid.",
+      "Silent diesel generators providing reliable, round-the-clock electric power for asphalt plants, lighting towers, and field offices.",
     verifiedDetails: [
-      "Configuration: Heavy-duty utility tractor with trailing rotary brush unit",
-      "Function: High-velocity sweeping of milled and granular pavement surfaces",
-      "Quality Impact: Ensures clean substrate for maximum bitumen prime/tack coat adhesion",
-      "Application: Mandatory surface preparation step on all highway and runway contracts",
-    ],
-  },
-  {
-    id: "m5",
-    title: "Atlas Copco QLT M10 Mobile Lighting Tower",
-    category: "auxiliary",
-    categoryLabel: "Support & Power",
-    image: "/images/fleet/m5.jpg",
-    alt: "Atlas Copco QLT M10 mobile light tower stenciled C P Arora unit 2",
-    description:
-      "Mobile diesel-powered light tower providing bright floodlights for safe round-the-clock night paving on highways and runways.",
-    verifiedDetails: [
-      "Model: Atlas Copco QLT M10 Mobile Light Tower",
-      "Branding: C P ARORA stencil with Unit #2 tag",
-      "Mobility: Single-axle towable trailer with stabilizing outriggers",
-      "Role: 24/7 night-time illumination on high-traffic corridors and airport runways",
-    ],
-  },
-  {
-    id: "m6",
-    title: "Atlas Copco XAMS 157 Mobile Air Compressor",
-    category: "auxiliary",
-    categoryLabel: "Support & Power",
-    image: "/images/fleet/m6.jpg",
-    alt: "Atlas Copco XAMS 157 mobile air compressor stenciled C P Arora unit 4 at airfield",
-    description:
-      "High-pressure portable air compressor used to blow away dust and clean runway surfaces before asphalt laying.",
-    verifiedDetails: [
-      "Model: Atlas Copco XAMS 157 High-Pressure Mobile Compressor",
-      "Branding: C P ARORA stencil with Unit #4 tag",
-      "Site Context: Active airfield tarmac (visible aircraft tail in background)",
-      "Role: High-pressure air jetting to purge dust and debris prior to asphalt sealing",
+      "Enclosure: Acoustic soundproof weatherproof canopy",
+      "Output: Continuous-rated prime diesel power generation",
+      "Deployment: Independent power for batch plants and night runway paving",
+      "Safety: Integrated circuit breakers and emergency shut-off",
     ],
   },
 ];
 
 export const PLANT_FACILITIES: PlantFacility[] = [
   {
-    id: "central-staging-yard",
-    title: "Central Equipment & Machinery Yard",
-    image: "/images/corporate/office-out.jpg",
-    alt: "CPA equipment mobilization yard with plant structures and staging areas",
+    id: "corporate-office",
+    title: "Corporate Headquarters & Operations Center",
+    image: "/images/corporate/office.jpg",
+    alt: "C P Arora Corporate Headquarters in Delhi",
     description:
-      "Company yard and maintenance depot housing machinery, batching plants, workshop bays, and stone stockpiles for quick dispatch across Delhi-NCR and North India.",
+      "Our main corporate office housing our project planning teams, estimation engineers, accounting department, and senior leadership.",
     features: [
-      "Heavy machinery repair and maintenance workshop",
-      "Covered spare parts storage and lubricant reserves",
-      "Stone aggregate storage areas and digital weighing bridge",
-      "Direct highway connectivity for fast equipment dispatch",
+      "Project management and planning teams",
+      "Tendering and estimation department",
+      "Financial and compliance administration",
+      "Executive management offices",
     ],
   },
   {
-    id: "corporate-operations-center",
-    title: "Corporate Head Office",
-    image: "/images/corporate/office.jpg",
-    alt: "C P Arora corporate office building exterior",
+    id: "mobilization-yard",
+    title: "Plant Yard & Equipment Mobilization Depot",
+    image: "/images/corporate/office-out.jpg",
+    alt: "C P Arora Equipment Staging and Maintenance Yard",
     description:
-      "New Delhi corporate office managing engineering designs, project estimates, tender coordination, and government approvals.",
+      "Our heavy machinery maintenance yard where road pavers, rollers, and plant equipment are serviced, stored, and prepared for rapid dispatch to project sites.",
     features: [
-      "Project planning and billing division",
-      "Technical survey and design team",
-      "Laboratory testing records and quality reports",
-      "Executive management and government liaison offices",
+      "Heavy machinery maintenance workshop",
+      "Spare parts inventory and maintenance stores",
+      "Rapid equipment dispatch and transport staging",
+      "Fleet safety inspections and maintenance checks",
     ],
   },
 ];

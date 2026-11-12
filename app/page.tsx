@@ -8,7 +8,7 @@ import {
   OurJourneySection,
   FeaturedProjectsSection,
   TheJobsSection,
-  FleetSection,
+  PlantsAndMachinerySection,
   ClientLogosSection,
 } from "@/components/home";
 import CTASection from "@/components/ui/CTASection";
@@ -83,8 +83,8 @@ export default function HomePage() {
       {/* The Jobs We Undertake */}
       <TheJobsSection />
 
-      {/* 6. Brief Infrastructure & Fleet Preview */}
-      <FleetSection />
+      {/* 6. Our Plants & Machinery Showcase */}
+      <PlantsAndMachinerySection />
 
       {/* 7. Client & Joint-Venture Partner Logos */}
       <ClientLogosSection />

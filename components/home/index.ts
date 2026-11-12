@@ -6,4 +6,5 @@ export { OurJourneySection } from "./OurJourneySection";
 export { FeaturedProjectsSection, FeaturedProjectsSection as OngoingKeyProjectsSection } from "./FeaturedProjectsSection";
 export { TheJobsSection } from "./TheJobsSection";
 export { FleetSection } from "./FleetSection";
+export { PlantsAndMachinerySection } from "./PlantsAndMachinerySection";
 export { ClientLogosSection } from "./ClientLogosSection";
