@@ -383,6 +383,20 @@ export const HeroAssembleCanvas: React.FC<HeroAssembleCanvasProps> = ({
     [onTransitionComplete]
   );
 
+  // Abort animation cleanly if tab is switched or hidden to avoid animation queue pile-up
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (document.hidden && isTransitioning) {
+        if (animFrameRef.current) {
+          cancelAnimationFrame(animFrameRef.current);
+        }
+        onTransitionComplete();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, [isTransitioning, onTransitionComplete]);
+
   // Trigger gear assemble transition
   useEffect(() => {
     if (isTransitioning && nextImageSrc) {

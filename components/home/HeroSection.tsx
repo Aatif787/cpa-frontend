@@ -107,7 +107,7 @@ export const HeroSection: React.FC = () => {
   // Guaranteed continuous auto-scroll interval
   useEffect(() => {
     const timer = setInterval(() => {
-      if (!isTransitioningRef.current) {
+      if (!isTransitioningRef.current && typeof document !== "undefined" && !document.hidden) {
         const nextIndex = (currentSlideRef.current + 1) % totalSlides;
         goToSlide(nextIndex, "next");
       }

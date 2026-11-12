@@ -12,6 +12,7 @@ export const AboutUsSection: React.FC = () => {
 
   useEffect(() => {
     let ticking = false;
+    let rafId: number | null = null;
 
     const updateScroll = () => {
       if (!sectionRef.current) return;
@@ -33,7 +34,7 @@ export const AboutUsSection: React.FC = () => {
 
     const handleScroll = () => {
       if (!ticking) {
-        requestAnimationFrame(updateScroll);
+        rafId = requestAnimationFrame(updateScroll);
         ticking = true;
       }
     };
@@ -46,6 +47,9 @@ export const AboutUsSection: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 

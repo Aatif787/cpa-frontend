@@ -90,9 +90,10 @@ export default function ExecutedProjectsPage() {
                       src={proj.image}
                       alt={proj.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-contain p-1.5 transition-transform duration-700 group-hover:scale-105"
-                      priority
+                      priority={idx < 3}
+                      loading={idx < 3 ? undefined : "lazy"}
                     />
                   </div>
 

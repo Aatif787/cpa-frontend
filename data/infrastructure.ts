@@ -8,7 +8,9 @@ export interface PlantMachineryItem {
 }
 
 export const PLANTS_AND_MACHINERY: PlantMachineryItem[] = [
-  // Left Column
+  // ==========================================
+  // LEFT COLUMN (11 Items)
+  // ==========================================
   {
     id: "crush-metro-1",
     title: "Crush Metro 220TPH",
@@ -41,7 +43,66 @@ export const PLANTS_AND_MACHINERY: PlantMachineryItem[] = [
     column: "left",
     order: 4,
   },
-  // Right Column
+  {
+    id: "rmc-plant-control",
+    title: "RMC Plant,",
+    image: "/images/fleet/machinery9.jpg",
+    alt: "RMC Plant, Ready Mix Concrete Control Center and Cooling Tower",
+    column: "left",
+    order: 5,
+  },
+  {
+    id: "milling-hywa",
+    title: "Milling Machine with Hywa",
+    image: "/images/fleet/m1.jpg",
+    alt: "Milling Machine with Hywa Tipper Truck on Runway Pavement",
+    column: "left",
+    order: 6,
+  },
+  {
+    id: "hywa-fleet",
+    title: "Hywa",
+    image: "/images/fleet/m3.jpg",
+    alt: "Hywa Heavy Tipper Trucks Staging Fleet",
+    column: "left",
+    order: 7,
+  },
+  {
+    id: "light-tower",
+    title: "Light Tower",
+    image: "/images/fleet/m5.jpg",
+    alt: "Light Tower C.P. ARORA Mobile Lighting Unit QLT M10",
+    column: "left",
+    order: 8,
+  },
+  {
+    id: "ptr-t220",
+    title: "PTR T220",
+    image: "/images/fleet/m7.jpg",
+    alt: "Volvo PTR T220 Pneumatic Tyre Multi-Wheel Compaction Roller",
+    column: "left",
+    order: 9,
+  },
+  {
+    id: "water-tanker",
+    title: "Water Tanker",
+    image: "/images/fleet/m9.jpg",
+    alt: "Water Tanker Truck C P ARORA Engineers Contractors Pvt Ltd",
+    column: "left",
+    order: 10,
+  },
+  {
+    id: "soil-compactor",
+    title: "Soil Compactor",
+    image: "/images/fleet/m11.jpg",
+    alt: "Heavy Vibratory Single Drum Soil Compactor Stenciled C P ARORA",
+    column: "left",
+    order: 11,
+  },
+
+  // ==========================================
+  // RIGHT COLUMN (11 Items)
+  // ==========================================
   {
     id: "crush-metro-2",
     title: "Crush Metro 220TPH",
@@ -74,6 +135,111 @@ export const PLANTS_AND_MACHINERY: PlantMachineryItem[] = [
     column: "right",
     order: 4,
   },
+  {
+    id: "rmc-plant-chute",
+    title: "RMC Plant",
+    image: "/images/fleet/machinery10_rmc.jpg",
+    alt: "RMC Plant Concrete Batching Plant with Transit Mixer Ramp",
+    column: "right",
+    order: 5,
+  },
+  {
+    id: "laying-vogele",
+    title: "Laying through Vogele",
+    image: "/images/fleet/m2.jpg",
+    alt: "Laying through Vogele Tracked Electronic Sensor Paver",
+    column: "right",
+    order: 6,
+  },
+  {
+    id: "transition-mixture",
+    title: "Transition Mixture",
+    image: "/images/fleet/m4.jpg",
+    alt: "Transition Mixture Fleet of Company-Owned Concrete Transit Mixers",
+    column: "right",
+    order: 7,
+  },
+  {
+    id: "air-compresso",
+    title: "Air Compresso",
+    image: "/images/fleet/m6.jpg",
+    alt: "Air Compresso C.P. ARORA Heavy Pneumatic Compressor Unit",
+    column: "right",
+    order: 8,
+  },
+  {
+    id: "vibratory-road-roller",
+    title: "Vibratory Road Roller",
+    image: "/images/fleet/m8.jpg",
+    alt: "Volvo Vibratory Tandem Road Roller Compacting Asphalt Course",
+    column: "right",
+    order: 9,
+  },
+  {
+    id: "tractor-broomer",
+    title: "Tractor with Broomer",
+    image: "/images/fleet/m10.jpg",
+    alt: "Tractor with Mechanical Broomer Road Cleaning Sweeper",
+    column: "right",
+    order: 10,
+  },
+  {
+    id: "wmm-plant",
+    title: "Wet Mix Macadam Plant",
+    image: "/images/fleet/m12.jpg",
+    alt: "Wet Mix Macadam (WMM) Soil-Aggregate Blending Plant",
+    column: "right",
+    order: 11,
+  },
+];
+
+export interface MachineryScheduleItem {
+  sNo: number;
+  name: string;
+  nos: number;
+  make: string;
+  model: string;
+  remark: string;
+}
+
+export const MACHINERY_SCHEDULE_LIST: MachineryScheduleItem[] = [
+  { sNo: 1, name: "CRUSHER PLANT", nos: 2, make: "METSO", model: "220 TPH", remark: "-" },
+  { sNo: 2, name: "HOT MIX PLANT BATCH TYPE", nos: 2, make: "APOLLO", model: "120-140TPH", remark: "-" },
+  { sNo: 3, name: "HOT MIX PLANT BATCH TYPE", nos: 1, make: "APOLLO", model: "90 TPH", remark: "-" },
+  { sNo: 4, name: "WET MIX PLANT", nos: 2, make: "APOLLO", model: "100 TPH", remark: "-" },
+  { sNo: 5, name: "CONCRETE BATCHING PLANT 75 CUM", nos: 1, make: "KYB CONMAT", model: "75 CUM", remark: "-" },
+  { sNo: 6, name: "CONCRETE BATCHING PLANT 70 CUM", nos: 1, make: "MACONS", model: "70 CUM", remark: "-" },
+  { sNo: 7, name: "CONCRETE BATCHING PLANT 60 CUM", nos: 1, make: "KYB CONMAT", model: "60 CUM", remark: "-" },
+  { sNo: 8, name: "CONCRETE BATCHING PLANT 30 CUM", nos: 2, make: "SCHWING STETTER", model: "30 CUM", remark: "-" },
+  { sNo: 9, name: "CONCRETE BATCHING PLANT 30 CUM", nos: 1, make: "KYB CONMAT", model: "30 CUM", remark: "-" },
+  { sNo: 10, name: "CONCRETE BATCHING PLANT 18 CUM", nos: 1, make: "SCHWING", model: "18 CUM", remark: "-" },
+  { sNo: 11, name: "SLIPFORM PAVER", nos: 1, make: "WIRTGEN", model: "SP 25 (3.5 Mtr)", remark: "-" },
+  { sNo: 12, name: "FIXFORM PAVER", nos: 1, make: "-", model: "-", remark: "-" },
+  { sNo: 13, name: "SCREED PAVER", nos: 2, make: "ATLAS COPCO", model: "-", remark: "-" },
+  { sNo: 14, name: "CEMENT / FLYASH SILO", nos: 6, make: "KAMAL ENTERPRISES/ VAK INDUSTRIES", model: "2017", remark: "-" },
+  { sNo: 15, name: "CHILLAR PLANT", nos: 1, make: "-", model: "-", remark: "-" },
+  { sNo: 16, name: "HYVA", nos: 70, make: "TATA, ASHOK LEYLAND, BHARAT BENZ", model: "-", remark: "-" },
+  { sNo: 17, name: "MILLING MACHINE", nos: 1, make: "TATA, ASHOK LEYLAND, BHARAT BENZ", model: "W 100H", remark: "-" },
+  { sNo: 18, name: "VSS MACRO PAVER MACHINE WITH MAN CHASSIS", nos: 2, make: "VSS MACRO", model: "-", remark: "-" },
+  { sNo: 19, name: "VOGELE PAVER 13 MTR", nos: 1, make: "VOGELE", model: "13 MTR.", remark: "-" },
+  { sNo: 20, name: "VOGELE PAVER 9 MTR.", nos: 1, make: "VOGELE", model: "9 MTR.", remark: "-" },
+  { sNo: 21, name: "APOLLO MODEL AP-550 HYDROSTATIC SENSOR PAVER", nos: 3, make: "APOLLO", model: "AP-550", remark: "-" },
+  { sNo: 22, name: "WET MIX PAVER FINISHER", nos: 3, make: "APOLLO", model: "WM6 HES", remark: "-" },
+  { sNo: 23, name: "PTR", nos: 1, make: "VOLVO", model: "PT 220", remark: "-" },
+  { sNo: 24, name: "TANDEM ROLLER", nos: 8, make: "VOLVO, DYNAPAC, AMMANN, WIRTGEN", model: "-", remark: "-" },
+  { sNo: 25, name: "TRANSIT MIXER 7 CUM", nos: 10, make: "TATA", model: "-", remark: "-" },
+  { sNo: 26, name: "TRAILER (LOW BED)", nos: 4, make: "ASHOK LEYLAND", model: "-", remark: "-" },
+  { sNo: 27, name: "SWEEPING MACHINE WITH EICHER CHASSIS", nos: 2, make: "TPS WITH EICHER CHASSIS", model: "-", remark: "-" },
+  { sNo: 28, name: "EXCAVATOR", nos: 9, make: "KOBELCO, TATA HITACHI", model: "SK210 / SK220", remark: "-" },
+  { sNo: 29, name: "WHEEL LOADER", nos: 8, make: "LIUGONG, JCB, HINDUSTAN", model: "835 / 836", remark: "-" },
+  { sNo: 30, name: "BACKHOE LOADER (JCB)", nos: 8, make: "CASE, JCB", model: "770EX", remark: "-" },
+  { sNo: 31, name: "MOTOR GRADER", nos: 8, make: "LIUGONG, CASE", model: "4180D", remark: "-" },
+  { sNo: 32, name: "SOIL COMPACTOR", nos: 9, make: "INGERSOLL RAND, ESCORTS, HAMM, DYNAPAC", model: "SD 110", remark: "-" },
+  { sNo: 33, name: "MINI ROLLER", nos: 2, make: "CASE, INGERSOLL RAND", model: "450 DX", remark: "-" },
+  { sNo: 34, name: "AIR COMPRESSOR", nos: 4, make: "ATLAS COPCO", model: "XA 157", remark: "-" },
+  { sNo: 35, name: "DIESEL BROWSER", nos: 4, make: "MAHINDRA", model: "DI 3200", remark: "-" },
+  { sNo: 36, name: "BITUMEN BROWSER", nos: 1, make: "EICHER", model: "-", remark: "-" },
+  { sNo: 37, name: "WATER TANKER 12 KL", nos: 6, make: "EICHER", model: "20.16", remark: "-" },
 ];
 
 export interface FleetItem {
